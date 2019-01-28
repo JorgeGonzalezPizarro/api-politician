@@ -1,0 +1,9 @@
+index:
+    path: /
+    controller: App\Politicians\Api\GetPoliticiansPagination::__invoke
+politician:
+    path: /politician
+    controller: App\Politicians\Api\CreatePolitician::__invoke
+update:
+    path: /update
+    controller: App\Politicians\Api\UpdatePolitician::__invoke

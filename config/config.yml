@@ -1,0 +1,7 @@
+tactician:
+  commandbus:
+    default:
+      middleware:
+      # service ids for all your middlewares, top down. First in, last out.
+      - tactician.middleware.command_handler
+  method_inflector: dispatch.toms

@@ -1,0 +1,8 @@
+App\Politicians\Domain\Politicians:
+  db: dbfullstack
+  collection: politicians
+  fields:
+    id:
+      id: true
+    name:
+      titular: string
