@@ -38,7 +38,7 @@ class GetPoliticians
             $pagination = $this->paginationService->__invoke($dto->getPage(), $politicians->count());
             return  $this->responseWithPagination($this->politiciansTransformer->transformCollectionAggregeteRootToResponse(
                 $this->politiciansRepository->findPaginated($pagination->firstItemPage(),
-                    $pagination->getItemsPerPage(), $pagination->getTotalItems())),
+                    $pagination->getItemsPerPage(), self::LIMITED_LIST)),
                 $this->paginationService->response($pagination)
                 );
         }

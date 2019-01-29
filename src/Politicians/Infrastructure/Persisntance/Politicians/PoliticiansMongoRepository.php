@@ -9,7 +9,6 @@
 namespace App\Politicians\Infrastructure\Persisntance\Politicians;
 
 
-use App\Politicians\Domain\Exceptions\PoliticianNotExists;
 use App\Politicians\Domain\Politicians;
 use App\Politicians\Domain\PoliticiansRepository;
 use App\Politicians\Infrastructure\AggregateRoot;
@@ -50,14 +49,7 @@ class PoliticiansMongoRepository implements PoliticiansRepository
 
     public function exists(string $id)
     {
-        try{
-            return  $this->documentManager->findOneBy(["id" => new \MongoId($id)]);
-
-        }
-        catch (\Exception $exception)
-        {
-            throw new PoliticianNotExists();
-        }
+        return  $this->documentManager->findOneBy(["id" => new \MongoId($id)]);
     }
 
     public function update(AggregateRoot $aggregateRoot)

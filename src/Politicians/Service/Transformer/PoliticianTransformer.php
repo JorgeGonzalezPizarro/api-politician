@@ -17,7 +17,7 @@ class PoliticianTransformer implements Transformer
 {
     public function transformCollectionAggregeteRootToResponse(DomainCollection $collectionAggregateRoot)
     {
-        return ["Politicians" => $collectionAggregateRoot->map(function ($aggregateRoot)
+        return ["politicians" => $collectionAggregateRoot->map(function ($aggregateRoot)
         {
             /**
              * @var $aggregateRoot Politicians
@@ -42,7 +42,7 @@ class PoliticianTransformer implements Transformer
             ];
 
         })->toArray()
-        ];
+            ];
     }
 
     public function transformAggregeteRootToResponse(AggregateRoot $aggregateRoot)

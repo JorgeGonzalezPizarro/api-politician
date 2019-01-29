@@ -15,7 +15,6 @@ use App\Politicians\Infrastructure\DomainCollection;
 interface PoliticiansRepository
 {
     public function findAll() : DomainCollection;
-    public function findLimited(int $limit) : DomainCollection;
     public function exists(string $id);
     public function save(AggregateRoot $aggregateRoot);
     public function update(AggregateRoot $aggregateRoot);
