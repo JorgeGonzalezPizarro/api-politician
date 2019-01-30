@@ -4,6 +4,9 @@ index:
 politician:
     path: /politician
     controller: App\Politicians\Api\CreatePolitician::__invoke
+    methods:    [POST]
+
 update:
     path: /update
     controller: App\Politicians\Api\UpdatePolitician::__invoke
+    methods:    [PUT]

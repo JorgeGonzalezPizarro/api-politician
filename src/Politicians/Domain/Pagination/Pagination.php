@@ -94,7 +94,7 @@ class Pagination implements AggregateRoot
 
     public static function create(string $page ,  $totalItems)
     {
-        return new self($page,$totalItems);
+        return new self((int) $page,(int)$totalItems);
     }
 
 }

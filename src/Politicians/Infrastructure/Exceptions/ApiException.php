@@ -16,6 +16,6 @@ class ApiException extends \Exception
     const HTTP_CODE= 500;
    public function __construct(string $message = "", int $code = 0, Throwable $previous = null)
    {
-       parent::__construct("Internal Error", self::HTTP_CODE, $previous);
+       parent::__construct($message, self::HTTP_CODE, $previous);
    }
 }

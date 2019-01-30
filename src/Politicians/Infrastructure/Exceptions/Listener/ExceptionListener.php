@@ -43,7 +43,7 @@ class ExceptionListener implements EventSubscriberInterface
 
        $exception = $event->getException();
         if (!$event->getException() instanceof DomainException) {
-            throw new ApiException();
+            throw new ApiException($exception->getMessage());
         }
         $event->setResponse(
             $this->createResponseForDomainException($exception));
