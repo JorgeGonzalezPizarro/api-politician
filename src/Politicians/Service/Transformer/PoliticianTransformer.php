@@ -41,7 +41,24 @@ class PoliticianTransformer implements Transformer
                 "observaciones" => $aggregateRoot->getObservaciones()
             ];
 
-        })->toArray()
+        })->toArray(),
+            "form" => [
+                "titular" => ["required" => true , "type" => "string" , "label"=>"Titular" ],
+                "partido" => ["required" => true , "type" => "string" , "label"=>"Partido" ],
+                "partidoParaFiltro" => ["required" => false , "type" => "string" , "label"=>"Part. filtro" ],
+                "genero" => ["required" => true , "type" => "string" , "label"=>"Genero" ],
+                "cargo" => ["required" => true , "type" => "string" , "label"=>"Genero" ],
+                "cargoParaFiltro" => ["required" => false , "type" => "string" , "label"=>"C. para filtro" ],
+                "institucion" => ["required" => true , "type" => "string" , "label"=>"Institución" ],
+                "ccaa" => ["required" => true , "type" => "string" , "label"=>"Comunidad Autónoma" ],
+                "sueldoBase" => ["required" => true , "type" => "number" , "label"=>"Sueldo base" ],
+                "pagasExtrasSueldo" => ["required" => false , "type" => "number" , "label"=>"P.E. Sueldo" ],
+                "otrasDietas" => ["required" => false , "type" => "number" , "label"=>"Otras dietas" ],
+                "trieniosSueldo" => ["required" => false , "type" => "number" , "label"=>"Trienios" ],
+                "retribucionAnual" => ["required" => true , "type" => "number" , "label"=>"Retr. Anual" ],
+                "retribucionMensual" => ["required" => true , "type" => "number" , "label"=>"Retr. Mensual" ],
+                "observaciones" => ["required" => false , "type" => "string" , "label"=>"Observaciones " ],
+            ]
             ];
     }
 
