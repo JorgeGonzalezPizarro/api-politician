@@ -9,6 +9,11 @@ Dentro del directorio del proyecto
 
 El fichero ./config/routes.yml  contiene las rutas necsarias para la conexion  .
 
+En caso de ejecucion en docker 
+### `docker-compose up -d  `
+
+Se deberá modificar el fichero ./config/packages/doctrine.yml con la path de conexion {server: "mongodb://mongodb:27017"}
+
 
 ## Arquitectura e implementacion
 
