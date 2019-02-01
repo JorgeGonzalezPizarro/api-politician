@@ -54,7 +54,7 @@ class PoliticianTransformer implements Transformer
                 "sueldoBase" => ["required" => true , "type" => "number" , "label"=>"Sueldo base" ],
                 "pagasExtrasSueldo" => ["required" => false , "type" => "number" , "label"=>"P.E. Sueldo" ],
                 "otrasDietas" => ["required" => false , "type" => "number" , "label"=>"Otras dietas" ],
-                "trieniosSueldo" => ["required" => false , "type" => "number" , "label"=>"Trienios" ],
+                "trieniosSueldo" => ["required" => true , "type" => "number" , "label"=>"Trienios" ],
                 "retribucionAnual" => ["required" => true , "type" => "number" , "label"=>"Retr. Anual" ],
                 "retribucionMensual" => ["required" => true , "type" => "number" , "label"=>"Retr. Mensual" ],
                 "observaciones" => ["required" => false , "type" => "string" , "label"=>"Observaciones " ],

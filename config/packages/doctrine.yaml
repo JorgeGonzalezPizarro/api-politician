@@ -21,13 +21,3 @@ doctrine_mongodb:
                     dir: '%kernel.project_dir%/src/Politicians/Domain'
                     prefix: 'App\Politicians\Domain'
                     alias: App
-#    document_managers:
-#        default:
-#            auto_mapping: true
-#            mappings:
-#                App:
-#                    is_bundle: false
-#                    type: yml
-#                    dir: '%kernel.project_dir%/src/Resources/config/doctrine/metadata/mongodb'
-#                    prefix: 'App\Politicians\Domain'
-#                    alias: App
