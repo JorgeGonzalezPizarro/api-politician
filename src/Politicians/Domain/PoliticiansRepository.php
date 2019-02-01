@@ -19,5 +19,6 @@ interface PoliticiansRepository
     public function save(AggregateRoot $aggregateRoot);
     public function update(AggregateRoot $aggregateRoot);
     public function findPaginated(int $limitMin, int $limitMax , int $numRecords);
+    public function findLimited(int $limit);
 
 }

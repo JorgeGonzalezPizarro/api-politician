@@ -37,6 +37,7 @@ class PoliticiansMongoRepository implements PoliticiansRepository
     public function findLimited(int $limit): DomainCollection
     {
         $numRowsPoliticians = $this->findAll()->count();
+        $limit = ($numRowsPoliticians===0? $limit=0 : $limit);
         return DomainCollection::fromArray($this->queryCreator->createQueryBuilder(Politicians::class)->eagerCursor(true)->getQuery()->execute()->skip($numRowsPoliticians-$limit)->limit($limit)->toArray());
 
     }
